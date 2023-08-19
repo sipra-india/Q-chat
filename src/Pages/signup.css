@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.main-container{
+    background-color: firebrick;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, input:active{
+    font-size: 13px;
+    border: none;
+    outline: none;
+    width: 230px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid lightgray;
+}
+
+.sign-up-btn{
+    border: none;
+    padding: 10px 0;
+    border-radius: 7px;
+}
+
+.form-wrapper{
+    padding: 45px 15px;
+    gap: 7px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-text{
+    font-size: 13px;
+}
+
+.title{
+    font-size: 12px;
+}
+
+.logo{
+    font-size: 23px;
+}
+
+#avatar{
+    display: none;
+}
+
+label{
+    display:flex;
+    padding: 0 25px;
+    align-items: center;
+    font-size: 13px;
+}
+img{
+    width: 40px;
+}
