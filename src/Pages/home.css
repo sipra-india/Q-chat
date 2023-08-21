@@ -1,5 +1,5 @@
 body, .home{
-    background-color: firebrick;
+    background-color: #501B1D;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -9,8 +9,10 @@ body, .home{
 }
 
 .container{
-    border: 1px solid white;
+    border: 1px solid #64485C;
     width: 65%;
     height: 80%;
     display: flex;
+    border-radius: 5px;
+    overflow: hidden;
 }
