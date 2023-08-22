@@ -1,0 +1,29 @@
+.logout{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-color: #64485c;
+    color: #adadad;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.logo{
+    font-weight: bold;
+    color: #2e1114;
+    padding: 2px 4px;
+}
+
+.headline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.066);
+}
+
+.user{
+    padding: 5px;
+    #name{
+        font-size: 12px;
+    }
+}

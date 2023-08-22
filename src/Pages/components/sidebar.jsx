@@ -1,16 +1,13 @@
 import React from 'react';
-import './sidebar.css'
+import './sidebar.css';
+import UserInfo from './UserInfo';
+import Search from './search';
 
 export default function Sidebar() {
   return (
     <div className='main'>
-      <div className="headline">
-      <div className="logo">Q Chat</div>
-      <div className="user">
-        <div id="name">Username</div>
-        <button className='logout'>Logout</button>
-      </div>
-      </div>
+      <UserInfo/>
+      <Search/>
     </div>
   )
 }
