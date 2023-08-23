@@ -1,0 +1,12 @@
+.chat{
+    display: flex;
+    padding: 0.3rem;
+    #img{
+        border-radius: 1.5rem;
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+}
