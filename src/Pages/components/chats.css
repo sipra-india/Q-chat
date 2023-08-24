@@ -21,6 +21,7 @@
     gap: 0.8rem;
     .img{
         width: 1.9rem;
-        stroke: #ababab;
+        filter: grayscale(100);
+        color: #adadad;
     }
 }
