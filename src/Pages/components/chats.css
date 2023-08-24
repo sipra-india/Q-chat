@@ -1,4 +1,26 @@
 .chats{
     flex: 2;
-    background-color:#ADADAD;
+    background-color:#adadad;
+    .chat-info{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        background-color:  #64485c;
+        color: #ababab;
+        font-size: 1.5rem;
+    }
+}
+
+#username{
+    display: flex;
+    gap: 0.5rem;
+}
+
+#options{
+    display: flex;
+    gap: 0.8rem;
+    .img{
+        width: 1.9rem;
+        stroke: #ababab;
+    }
 }
