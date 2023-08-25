@@ -1,6 +1,8 @@
 .chats{
     flex: 2;
+    position: relative;
     background-color:#adadad;
+    overflow: hidden;
     .chat-info{
         display: flex;
         justify-content: space-between;
@@ -23,4 +25,16 @@
     .img{
         width: 1.9rem;
     }
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.input{
+    position:absolute;
+    bottom: 0;
+    width: 100vw;
 }

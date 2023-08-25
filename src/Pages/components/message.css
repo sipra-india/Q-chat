@@ -1,0 +1,8 @@
+.message{
+    display: inline;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    border-bottom-left-radius: 0;
+    background-color: whitesmoke;
+}

@@ -1,5 +1,7 @@
 import React from 'react';
+import Input from './input';
 import './chats.css';
+import Message from './message';
 import more from '../../images/more.png';
 import cam from '../../images/camera.png';
 import add from '../../images/add.png';
@@ -16,6 +18,13 @@ export default function Chat_Area() {
         <img className='img' src={add} />
         <img className='img' src={more} />
         </div>
+      </div>
+      <div className="messages">
+        <Message  message="Hi!!"/>
+        <Message message="How are you?"/>
+      </div>
+      <div className="input">
+        <Input/>
       </div>
     </div>
   )
