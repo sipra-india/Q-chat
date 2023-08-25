@@ -1,8 +1,8 @@
 import React from 'react';
 import './chats.css';
-import more from '../../images/more.svg';
-import cam from '../../images/cam.svg';
-import add from '../../images/add.svg';
+import more from '../../images/more.png';
+import cam from '../../images/camera.png';
+import add from '../../images/add.png';
 
 export default function Chat_Area() {
   return (
