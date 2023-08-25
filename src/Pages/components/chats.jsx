@@ -4,6 +4,7 @@ import './chats.css';
 import Message from './message';
 import more from '../../images/more.png';
 import cam from '../../images/camera.png';
+import pfp from '../../images/pfp1.jpg'
 import add from '../../images/add.png';
 
 export default function Chat_Area() {
@@ -20,8 +21,8 @@ export default function Chat_Area() {
         </div>
       </div>
       <div className="messages">
-        <Message  message="Hi!!"/>
-        <Message message="How are you?"/>
+        <Message  message="Hi!!" img={pfp}/>
+        <Message message="How are you?" img={pfp}/>
       </div>
       <div className="input">
         <Input/>

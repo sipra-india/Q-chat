@@ -12,7 +12,10 @@ export default function Input() {
         <input placeholder="Write something..." />
         </div>
         <div className="send-option">
-        <img src={add} alt='' className='image' />
+        <input id='image' type='file' style={{display:'none'}} />
+        <label htmlFor="image">
+         <img src={add} alt='' className='image' />
+        </label>
         <input id='file' type='file' style={{display:'none'}} />
         <label htmlFor='file'>
             <img className='image tilt' src={attach} />

@@ -1,8 +1,17 @@
-.message{
+.content{
     display: inline;
-    padding: 0.3rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
-    margin: 0.5rem;
-    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
     background-color: whitesmoke;
+}
+
+.message{
+    display: flex;
+    gap: 0.4rem;
+    margin: 0.5rem;
+}
+
+#profile{
+    border-radius: 2rem;
 }
