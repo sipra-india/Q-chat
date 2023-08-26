@@ -1,5 +1,6 @@
 import React from 'react';
-import './UserInfo.css'
+import './UserInfo.css';
+import pfp from '../../images/pfp3.jpg'
 
 export default function UserInfo() {
   return (
@@ -7,8 +8,13 @@ export default function UserInfo() {
         <div className="headline">
           <div className="logo">Q Chat</div>
           <div className="user">
+            <div id="pfp">
+            <img src={pfp} ></img>
+            </div>
+            <div>
             <div id="name">Username</div>
             <button className='logout'>Logout</button>
+            </div>
           </div>
       </div>
     </div>

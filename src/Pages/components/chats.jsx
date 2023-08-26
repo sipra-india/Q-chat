@@ -4,7 +4,7 @@ import './chats.css';
 import Message from './message';
 import more from '../../images/more.png';
 import cam from '../../images/camera.png';
-import pfp from '../../images/pfp1.jpg'
+import pfp from '../../images/pfp3.jpg'
 import add from '../../images/add.png';
 
 export default function Chat_Area() {

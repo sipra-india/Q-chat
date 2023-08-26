@@ -24,8 +24,14 @@
 }
 
 .user{
+    display: flex;
+    gap: 0.8rem;
     padding: 0.33rem;
     #name{
         font-size: 1.13rem;
     }
+}
+
+img{
+    border-radius: 1.5rem;
 }

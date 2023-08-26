@@ -1,5 +1,4 @@
 .content{
-    display: inline;
     padding: 0.5rem;
     border-radius: 0.5rem;
     border-top-left-radius: 0;
@@ -8,6 +7,9 @@
 
 .message{
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
     gap: 0.4rem;
     margin: 0.5rem;
 }
