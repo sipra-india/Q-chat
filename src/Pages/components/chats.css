@@ -2,43 +2,6 @@
     flex: 2;
     position: relative;
     background-color:#adadad;
-    overflow: scroll;
-    .chat-info{
-        display: flex;
-        justify-content: space-between;
-        padding: 0.5rem;
-        background-color:  #64485c;
-        color: #aeaeae;
-        font-size: 1.5rem;
-    }
-}
-
-#username{
-    display: flex;
-    gap: 0.5rem;
-}
-
-#options{
-    display: flex;
-    gap: 0.8rem;
-    color: #ababab;
-    .img{
-        width: 1.9rem;
-    }
-}
-
-.messages{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    width: 100%;
-    background-color: #64480c;
-    height: 100%;
-    
-    #space{
-        height: 6.3rem;
-    }
 }
 
 .input{
