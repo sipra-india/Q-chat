@@ -23,6 +23,7 @@ export default function Chat_Area() {
       <div className="messages">
         <Message  message="Hi!!" img={pfp}/>
         <Message message="How are you?" img={pfp}/>
+        <div id='space'></div>
       </div>
       <div className="input">
         <Input/>

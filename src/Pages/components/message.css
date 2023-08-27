@@ -1,3 +1,5 @@
+
+
 .content{
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -5,8 +7,9 @@
     background-color: whitesmoke;
 }
 
-.message{
+.extra{
     display: flex;
+    flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: flex-end;
     text-align: right;

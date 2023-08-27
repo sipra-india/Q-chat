@@ -2,7 +2,7 @@
     flex: 2;
     position: relative;
     background-color:#adadad;
-    overflow: hidden;
+    overflow: scroll;
     .chat-info{
         display: flex;
         justify-content: space-between;
@@ -31,8 +31,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;
-    width: max-content;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #64480c;
+    height: 100%;
+    
+    #space{
+        height: 6.3rem;
+    }
 }
 
 .input{
