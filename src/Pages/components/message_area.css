@@ -4,3 +4,21 @@
     overflow-y: scroll;
     height: 85%;
 }
+
+.message-area::-webkit-scrollbar-track {
+    background-color: #fff; /* Background color of the track */
+  }
+  
+  .message-area::-webkit-scrollbar-thumb {
+    background-color: red; 
+    border: 2px solid #fff; 
+    border-radius: 4px; 
+  }
+  
+  .message-area::-webkit-scrollbar-thumb:horizontal {
+    width: 6px; /* Width of the horizontal thumb */
+  }
+  
+  .message-area::-webkit-scrollbar-thumb:vertical {
+    height: 6px; 
+  }

@@ -35,3 +35,9 @@
 #pfp{
     border-radius: 1.5rem;
 }
+
+@media screen and (max-width:480px) {
+    .logo{
+        display: none;
+    }
+}

@@ -3,3 +3,9 @@
     border-right: 0.06rem solid #83677b;
     background-color: #83677B;
 }
+
+@media screen and (max-width:480px){
+    .main{
+        
+    }
+}
