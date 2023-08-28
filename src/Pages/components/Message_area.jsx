@@ -6,18 +6,12 @@ import './message_area.css'
 export default function Message_area() {
   return (
     <div className="message-area">
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
-        <Message img={pfp} message="Hii!!"/>
+      <Message img={pfp} message="Hii!!" />
+        <Message src={pfp} img={pfp}/>
+        <Message img={pfp} message="Hii!!" />
+        <Message src={pfp} img={pfp}/>
+        <Message img={pfp} message="Hii!!" />
+        <Message src={pfp} img={pfp}/>
     </div>
   )
 }

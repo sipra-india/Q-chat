@@ -9,7 +9,7 @@ export default function UserInfo() {
           <div className="logo">Q Chat</div>
           <div className="user">
             <div id="pfp">
-            <img src={pfp} ></img>
+            <img id='pfp' src={pfp} ></img>
             </div>
             <div>
             <div id="name">Username</div>

@@ -1,7 +1,8 @@
-
-
 .content{
     padding: 0.5rem;
+    min-width: 10%;
+    width: fit-content;
+    max-width: max-content;
     border-radius: 0.5rem;
     border-top-left-radius: 0;
     background-color: whitesmoke;
@@ -9,14 +10,30 @@
 
 .extra{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: flex-end;
     text-align: right;
+    width: 95%;
     gap: 0.4rem;
     margin: 0.5rem;
+
+    &.get{
+        flex-direction: row-reverse;
+
+        .content{
+            background-color: lightgray;
+            border-radius: 0.5rem;
+            border-bottom-right-radius: 0;
+        }
+    }
 }
 
 #profile{
     border-radius: 2rem;
+}
+
+#sent-img{
+    border-radius: 0.5rem;
+    width: fit-content;
 }
