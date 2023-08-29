@@ -7,8 +7,8 @@ export default function User() {
     <div className='chat'>
         <img id='img' src={pfp} alt=''/>
         <div className='info'>
-            <span>name</span>
-            <span>last message</span>
+            <span id='receivername'>name</span>
+            <span id='last'>last message</span>
         </div>
     </div>
   )

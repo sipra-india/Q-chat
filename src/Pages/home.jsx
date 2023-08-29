@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className='home'>
         <div className='container'>
-          <Sidebar/>
+          <Sidebar className="hide" />
           <Chat_Area/>
         </div>
     </div>
