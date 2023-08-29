@@ -7,7 +7,6 @@ body{
 }
 
 .main-container{
-    background-color: firebrick;
     display: flex;
     height: 100vh;
     align-items: center;
@@ -21,40 +20,50 @@ form{
 }
 
 input, input:active{
-    font-size: 13px;
+    font-size: 16px;
     border: none;
     outline: none;
-    width: 230px;
-    padding-bottom: 7px;
-    border-bottom: 1px solid lightgray;
+    width: 300px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2e1114;
+    background-color: #afafaf;
+
+    &::placeholder{
+        color: #474747;
+    }
 }
 
 .sign-up-btn{
     border: none;
     padding: 10px 0;
     border-radius: 7px;
+    background-color: #64485c;
+    color: #afafaf;
+    font-size: 18px;
 }
 
 .form-wrapper{
-    padding: 45px 15px;
-    gap: 7px;
+    padding: 60px 30px;
+    gap: 10px;
     border-radius: 20px;
-    background-color: white;
+    background-color:#afafaf;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .login-text{
-    font-size: 13px;
+    font-size: 17px;
 }
 
 .title{
-    font-size: 12px;
+    font-size: 17px;
 }
 
-.logo{
-    font-size: 23px;
+#logo{
+    font-size: 40px;
+    font-weight: bold;
+    color: #2e1114;
 }
 
 #avatar{

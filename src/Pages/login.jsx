@@ -5,11 +5,11 @@ export default function Login() {
   return (
         <div className='main-container'>
             <div className='form-wrapper'>
-              <div className='logo'>Q-Chat</div>
+              <div id='logo'>Q-Chat</div>
               <div className='title'>Login</div>
                 <form>
-                    <input type='email' placeholder='E-mail'/>
-                    <input type='password' placeholder='Password'/>
+                    <input required type='email' placeholder='E-mail'/>
+                    <input required type='password' placeholder='Password'/>
                     <button className='sign-up-btn'>Login</button>
                     
                 </form>

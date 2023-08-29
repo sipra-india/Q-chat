@@ -1,14 +1,39 @@
 import React from 'react';
 import './signup.css';
-import add from '../images/add_avatar.png'
+import add from '../images/add_avatar.png';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../firebase'
 
 export default function Signup() {
+
+  function handleSubmit(e){
+    e.preventDefault();
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    const password = e.target[2].value;
+
+    const auth = getAuth();
+createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+
+
+  }
+
   return (
         <div className='main-container'>
             <div className='form-wrapper'>
-              <div className='logo'>Q-Chat</div>
+              <div id='logo'>Q-Chat</div>
               <div className='title'>Sign Up</div>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <input type='text' placeholder='Username'/>
                     <input type='email' placeholder='E-mail'/>
                     <input type='password' placeholder='Password'/>
