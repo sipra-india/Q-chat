@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import './signup.css';
 import add from '../images/add_avatar.png';
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -6,25 +6,27 @@ import { auth } from '../firebase'
 
 export default function Signup() {
 
+  const [err, SetErr] = useState('')
+
   function handleSubmit(e){
     e.preventDefault();
     const name = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
 
-    const auth = getAuth();
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+
+    console.log(user);
     // ...
-  })
-  .catch((error) => {
+  }).catch((error) => {
     const errorCode = error.code;
-    const errorMessage = error.message;
+    SetErr(error.message);
     // ..
   });
-
+  SetErr('')
 
   }
 
@@ -45,6 +47,7 @@ createUserWithEmailAndPassword(auth, email, password)
                     <button className='sign-up-btn'>Sign Up</button>
                     
                 </form>
+                <p>{err}</p>
                 <p className='login-text'>Already have an account? Login</p>
             </div>
         </div>
