@@ -1,44 +1,58 @@
 import React,{ useState } from 'react';
 import './signup.css';
 import add from '../images/add_avatar.png';
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../firebase'
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth, storage } from '../firebase';
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 export default function Signup() {
 
   const [err, SetErr] = useState('')
 
-  function handleSubmit(e){
+  async function handleSubmit(e){
     e.preventDefault();
-    const name = e.target[0].value;
+    const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
+    const pfp = e.target[3].files[0];
 
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
+    try{
+      const res = await createUserWithEmailAndPassword(auth, email, password)
 
-    console.log(user);
-    // ...
-  }).catch((error) => {
-    const errorCode = error.code;
-    SetErr(error.message);
-    // ..
-  });
-  SetErr('')
+const storageRef = ref(storage, displayName);
 
+const uploadTask = uploadBytesResumable(storageRef, file);
+
+// Register three observers:
+// 1. 'state_changed' observer, called any time the state changes
+// 2. Error observer, called on failure
+// 3. Completion observer, called on successful completion
+uploadTask.on( 
+  (error) => {
+    SetErr('Something went Wrong')
+  }, 
+  () => {
+    getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
+      await updateProfile(res.user,{
+
+      })
+    });
+  }
+);
+    }catch(err){
+      SetErr('Something went wrong')
+    }
   }
 
   return (
-        <div className='main-container'>
+        <div className='main'>
             <div className='form-wrapper'>
               <div id='logo'>Q-Chat</div>
               <div className='title'>Sign Up</div>
                 <form onSubmit={handleSubmit}>
-                    <input type='text' placeholder='Username'/>
-                    <input type='email' placeholder='E-mail'/>
-                    <input type='password' placeholder='Password'/>
+                    <input required type='text' placeholder='Username'/>
+                    <input required type='email' placeholder='E-mail'/>
+                    <input required type='password' placeholder='Password'/>
                     <input type='file' id='avatar'/>
                     <label htmlFor='avatar'>
                       <img src={add} />
@@ -47,7 +61,7 @@ createUserWithEmailAndPassword(auth, email, password)
                     <button className='sign-up-btn'>Sign Up</button>
                     
                 </form>
-                <p>{err}</p>
+                <p id='err-message'>{err}</p>
                 <p className='login-text'>Already have an account? Login</p>
             </div>
         </div>

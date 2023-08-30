@@ -6,11 +6,15 @@ body{
     margin: 0;
 }
 
-.main-container{
+.main-container, .main{
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
+}
+
+.main{
+    height: 80vh;
 }
 
 form{
@@ -40,6 +44,9 @@ input, input:active{
     background-color: #64485c;
     color: #afafaf;
     font-size: 18px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .form-wrapper{
@@ -78,4 +85,10 @@ label{
 }
 img{
     width: 40px;
+}
+
+#err-message{
+    color: firebrick;
+    font-size: 15px;
+    margin-bottom: -10px;
 }
