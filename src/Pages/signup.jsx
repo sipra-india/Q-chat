@@ -40,7 +40,7 @@ uploadTask.on(
   }
 );
     }catch(err){
-      SetErr('error')
+      SetErr('Something went wrong')
     }
   }
 
