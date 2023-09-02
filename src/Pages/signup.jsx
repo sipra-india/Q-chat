@@ -2,7 +2,8 @@ import React,{ useState } from 'react';
 import './signup.css';
 import add from '../images/add_avatar.png';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, storage } from '../firebase';
+import { auth, storage, db } from '../firebase';
+import { doc, setDoc } from "firebase/firestore"; 
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 export default function Signup() {
@@ -21,24 +22,32 @@ export default function Signup() {
 
 const storageRef = ref(storage, displayName);
 
-const uploadTask = uploadBytesResumable(storageRef, file);
+const uploadTask = uploadBytesResumable(storageRef, pfp);
 
-// Register three observers:
-// 1. 'state_changed' observer, called any time the state changes
-// 2. Error observer, called on failure
-// 3. Completion observer, called on successful completion
 uploadTask.on( 
   (error) => {
-    SetErr('Something went Wrong')
+    SetErr("Something went wrong:" + error.message)
   }, 
   () => {
     getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
       await updateProfile(res.user,{
+        displayName,
+        photoURL: downloadURL,
+      });
 
-      })
+      await setDoc(doc(db,"users", res.user.uid )),{
+        uid: res.user.uid,
+        displayName,
+        email,
+        photoURL: downloadURL,
+        password
+      }
     });
   }
 );
+
+
+
     }catch(err){
       SetErr('Something went wrong')
     }
