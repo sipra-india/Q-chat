@@ -28,12 +28,15 @@ uploadTask.on(
   (error) => {
     SetErr("Something went wrong:" + error.message)
   }, 
+
   () => {
     getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
       await updateProfile(res.user,{
         displayName,
         photoURL: downloadURL,
       });
+
+      console.log(res.user.uid)
 
       await setDoc(doc(db,"users", res.user.uid )),{
         uid: res.user.uid,
