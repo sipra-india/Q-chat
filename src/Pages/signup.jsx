@@ -24,10 +24,7 @@ const storageRef = ref(storage, displayName);
 
 const uploadTask = uploadBytesResumable(storageRef, pfp);
 
-uploadTask.on( 
-  (error) => {
-    SetErr("Something went wrong:" + error.message)
-  }, 
+uploadTask.on(  
 
   () => {
     getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
@@ -36,7 +33,7 @@ uploadTask.on(
         photoURL: downloadURL,
       });
 
-      console.log(res.user.uid)
+      console.log(res)
 
       await setDoc(doc(db,"users", res.user.uid )),{
         uid: res.user.uid,
